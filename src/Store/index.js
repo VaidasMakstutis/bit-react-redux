@@ -1,4 +1,22 @@
-import { createStore } from "redux";
+import { applyMiddleware, createStore } from "redux";
+import { createLogger } from "redux-logger";
 import namesReducer from "../Reducers/namesReducer";
 
-export default createStore(namesReducer);
+const logger = createLogger();
+
+const myLogger = store => next => action => {
+    
+    console.log('My logger: ', action);
+    if (!action.payload) {
+        action.payload = 'No name';
+    }
+
+    let result = next(action); 
+    return result;
+}
+
+export default createStore(
+    namesReducer, 
+    // applyMiddleware(logger),
+    applyMiddleware(myLogger)
+);

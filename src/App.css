@@ -40,6 +40,20 @@
 .cols {
   padding: 20px;
   display: flex;
+  flex-direction: column;
+}
+
+.cols > div {
+  display: flex;
+  width: 100%;
+}
+
+.input {
+  width: 50%;
+}
+
+button {
+  margin: 5px;
 }
 
 .boys {
