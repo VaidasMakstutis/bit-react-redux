@@ -6,7 +6,9 @@ const initNames = {
 
 function namesReducer(state = initNames, action) {
     let names = {...state};
-
+    switch(action.type) {
+        default:
+    }
 
     return names;
 }

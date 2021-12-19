@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+.cols {
+  padding: 20px;
+  display: flex;
+}
+
+.boys {
+  width: 50%;
+  padding: 0;
+  background-color: skyblue;
+}
+
+.girls {
+  width: 50%;
+  padding: 0;
+  background-color: pink;
+}
+
+li {
+  list-style: none;
+  padding: 10px;
+}
